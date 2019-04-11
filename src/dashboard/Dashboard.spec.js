@@ -1,10 +1,8 @@
 import React from 'react';
-import Link from '../Link.react';
 import renderer from 'react-test-renderer';
 
 import Display from "../display/display.js"
 import Controls from "../controls/controls.js"
-import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library'
 
 
 describe("Dashboard", () => { 

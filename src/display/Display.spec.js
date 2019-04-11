@@ -1,8 +1,6 @@
 import React from 'react';
-import Link from '../Link.react';
 import renderer from 'react-test-renderer';
 import Display from "./Display";
-import {render, fireEvent, cleanup, waitForElement} from 'react-testing-library'
 
 
 describe("Display", () => { 
@@ -13,8 +11,8 @@ describe("Display", () => {
         .toJSON();
     expect(tree).toMatchInLineSnapshot(
         <div className="display panel">
-        <div className={lockedClass}>Locked</div>
-        <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div>
+        <div className="red-led">Locked</div>
+        {/* <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div> */}
       </div>
     );
     });
@@ -26,8 +24,8 @@ describe("Display", () => {
         expect(tree).toMatchInLineSnapshot(
 
             <div className="display panel">
-            <div className={lockedClass}>Unlocked</div>
-            <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div>
+            <div className="green-led">Unlocked</div>
+            {/* <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div> */}
           </div>
 
         );
@@ -40,8 +38,8 @@ describe("Display", () => {
         expect(tree).toMatchInLineSnapshot(
 
             <div className="display panel">
-            <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div>
-            <div className={closedClass}>Closed</div>
+            {/* <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div> */}
+            <div className="red-led">Closed</div>
             </div>
 
         );
@@ -54,8 +52,8 @@ describe("Display", () => {
             expect(tree).toMatchInLineSnapshot(
 
                 <div className="display panel">
-                <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div>
-                <div className={closedClass}>Open</div>
+                {/* <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div> */}
+                <div className="green-led">Open</div>
                 </div>
 
             );
