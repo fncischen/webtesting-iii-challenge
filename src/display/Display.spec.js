@@ -9,7 +9,7 @@ describe("Display", () => {
     const tree = renderer
         .create(<Display locked={true}/>)
         .toJSON();
-    expect(tree).toMatchSnapshot(
+    expect(tree).toMatchInLineSnapshot(
         <div className="display panel">
         <div className={lockedClass}>Locked</div>
         <div className={closedClass}>{closed ? 'Closed' : 'Open'}</div>
@@ -21,7 +21,7 @@ describe("Display", () => {
         const tree = renderer
         .create(<Display locked={false}/>)
         .toJSON();
-        expect(tree).toMatchSnapshot(
+        expect(tree).toMatchInLineSnapshot(
 
             <div className="display panel">
             <div className={lockedClass}>Unlocked</div>
@@ -35,7 +35,7 @@ describe("Display", () => {
         const tree = renderer
             .create(<Display closed={true}/>)
             .toJSON();
-        expect(tree).toMatchSnapshot(
+        expect(tree).toMatchInLineSnapshot(
 
             <div className="display panel">
             <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div>
@@ -49,7 +49,7 @@ describe("Display", () => {
             const tree = renderer
             .create(<Display closed={false}/>)
             .toJSON();
-            expect(tree).toMatchSnapshot(
+            expect(tree).toMatchInLineSnapshot(
 
                 <div className="display panel">
                 <div className={lockedClass}>{locked ? 'Locked' : 'Unlocked'}</div>
