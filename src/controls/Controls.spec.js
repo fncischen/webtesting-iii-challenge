@@ -5,6 +5,8 @@ import Link from '../Link.react';
 import renderer from 'react-test-renderer';
 import Controls from "./Controls";
 
+describe("Controls", () => { 
+
 it('Control button is toggled for locked and closed', () => {
   const tree = renderer
     .create(<Controls locked={true} closed={true}/>)
@@ -18,3 +20,5 @@ it('Control button is toggled for unlocked and open', () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+});
