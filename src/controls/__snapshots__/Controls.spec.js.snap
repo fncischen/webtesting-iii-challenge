@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls Control button is toggled for locked and closed 1`] = `
+<div
+  className="controls panel"
+>
+  <button
+    className="toggle-btn"
+    disabled={false}
+  >
+    Unlock Gate
+  </button>
+  <button
+    className="toggle-btn"
+    disabled={true}
+  >
+    Open Gate
+  </button>
+</div>
+`;
+
+exports[`Controls Control button is toggled for unlocked and open 1`] = `
+<div
+  className="controls panel"
+>
+  <button
+    className="toggle-btn"
+    disabled={true}
+  >
+    Lock Gate
+  </button>
+  <button
+    className="toggle-btn"
+    disabled={false}
+  >
+    Close Gate
+  </button>
+</div>
+`;
